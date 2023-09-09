@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 # Extract sender, receiver, and flags using scan and regular expressions
-matches = ARGV[0].scan(/\[from:(.?)\] \[to:(.?)\] \[flags:(.*?)\]/)
+matches = ARGV[0].scan(/\[from:(.*?)\] \[to:(.*?)\] \[flags:(.*?)\]/)
 
 # Check if any matches were found
 if matches.any?
@@ -14,3 +14,4 @@ if matches.any?
 else
   puts "No matches found."
 end
+
